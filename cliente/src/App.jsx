@@ -2,13 +2,18 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import axios from "axios";
 import Content from "./components/Content";
+import {
+  BrowserRouter as Router,
+} from "react-router-dom";
 const Container = styled.div`
-  background-color: #000000;
+  background-color: #4090f7;
   color: #ffffff;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100vw;
   height: 100vh;
-  flex-direction: column;
 `;
 
 const URL = "http://localhost:3003/api/registrar";
@@ -26,7 +31,9 @@ const App = () => {
     console.log(respo.data);
   }
   return <Container>
+    <Router>
       <Content></Content>
+    </Router>
   </Container>;
 };
 
