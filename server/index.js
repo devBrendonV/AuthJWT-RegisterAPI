@@ -10,8 +10,8 @@ dotenv.config();
 
 mongoose.connect(
   process.env.DB_URL,
-  console.log("Conectado ao Banco de dados")
+  console.log("Connected on Mongoose")
 );
 app.use(express.json());
 
-app.listen(PORT, () => console.log("Servidor Online"));
+app.listen(PORT, () => console.log("Server On"));
