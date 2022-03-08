@@ -43,6 +43,7 @@ export const CardBody = styled.div`
     margin-bottom: 10px;
     width: 100%;
     cursor: pointer;
+    
   }
   .remember {
     display: flex;
@@ -76,13 +77,4 @@ export const CardButton = styled.button`
   color: #f7f2f2;
   margin-bottom: 10px;
   cursor: pointer;
-`;
-export const CardFooter = styled.div`
-  background-color: #d6d6d6;
-  width: 100%;
-  height: 70px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 0px 0px 5px 5px;
 `;

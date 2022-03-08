@@ -12,15 +12,15 @@ const RegisterCard = () => {
       <CardBody>
       <h1>Sign Up</h1>
         <label htmlFor="name">
-          Enter Your name
+          Enter Your name:
           <CardInput type='text' id="name" placeholder="Ex: Brendon Victor"/>
         </label>
         <label htmlFor="email">
-          Enter Your Email
+          Enter Your Email:
           <CardInput type='text' id="email" placeholder="Ex: devbrendonvs@gmail.com"/>
         </label>
         <label htmlFor="password">
-          Enter Your Password
+          Enter Your Password:
           <CardInput type='password' id="password" />
         </label>
       <CardButton>Register</CardButton>

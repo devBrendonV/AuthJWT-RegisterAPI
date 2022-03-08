@@ -16,7 +16,7 @@ const LoginCard = () => {
         <h1>Sign In</h1>
         <CardInput autoFocus autoCapitalize="" type="text" placeholder="Type Your Email"/>
         <CardInput type="password" placeholder="Type Your Password"/>
-        <CardButton>Sign in</CardButton>
+        <CardButton >Sign in</CardButton>
         <div className="remember">
           <label htmlFor="remember">
             <input type="checkbox" id="remember" />
