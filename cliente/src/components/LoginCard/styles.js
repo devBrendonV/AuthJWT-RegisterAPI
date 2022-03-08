@@ -43,7 +43,6 @@ export const CardBody = styled.div`
 `;
 
 export const CardInput = styled.input`
-color: blue;
   width: 100%;
   height: 50px;
   border-radius: 5px;

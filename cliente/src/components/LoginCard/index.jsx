@@ -14,15 +14,15 @@ const LoginCard = () => {
       <CardBody>
         <FaUserCircle className="icon" />
         <h1>Sign In</h1>
-        <CardInput type="text" placeholder="Type Your Email"/>
-        <CardInput type="text" placeholder="Type Your Password"/>
+        <CardInput autoFocus autoCapitalize="" type="text" placeholder="Type Your Email"/>
+        <CardInput type="password" placeholder="Type Your Password"/>
         <CardButton>Sign in</CardButton>
         <div className="remember">
           <label htmlFor="remember">
             <input type="checkbox" id="remember" />
             Remember me
           </label>
-          <Link to="/register">Forgot Password?</Link>
+          <Link to="">Forgot Password?</Link>
         </div>
       </CardBody>
       <CardFooter>
