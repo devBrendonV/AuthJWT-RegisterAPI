@@ -15,7 +15,7 @@ let emailRegex =
   /^[a-zA-Z0-9]{6,20}\@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
 
 const LoginCard = () => {
-  const { email, password, setEmail, setPassword, login, errorReceived } =
+  const { email, password, setEmail, setPassword, login, resetData, errorReceived } =
     useContext(AppContext);
   const [showPassword, setShowPassword] = useState(false);
 
@@ -75,7 +75,7 @@ const LoginCard = () => {
         </form>
       </CardBody>
       <CardFooter>
-        Not a Member ? <Link  to="/register">Create a Account</Link>
+        Not a Member ? <Link onClick={()=>resetData()} to="/register">Create a Account</Link>
       </CardFooter>
       <button
         className="showpassword"

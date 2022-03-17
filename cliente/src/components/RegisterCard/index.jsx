@@ -27,6 +27,7 @@ const RegisterCard = () => {
     register,
     repassword,
     setRepassword,
+    resetData
   } = useContext(AppContext);
   if (localStorage.getItem("auth-token") !== null) {
     window.location.href = "http://localhost:3000/logged";
@@ -74,7 +75,7 @@ const RegisterCard = () => {
 
   return (
     <Container>
-      <Link to="/" className="icon" title="Logoff">
+      <Link to="/" className="icon" title="Logoff" onClick={()=>resetData()}>
         <BsArrowLeftCircleFill></BsArrowLeftCircleFill>
       </Link>
       <CardBody>

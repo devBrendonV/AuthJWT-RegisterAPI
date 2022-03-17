@@ -83,7 +83,9 @@ const Store = (props) => {
             localStorage.clear();
             window.location.href = "http://localhost:3000/";
           }
-        },
+        },resetData: function(){
+          setState(inicialState);
+        }
       }}
     >
       {props.children}
