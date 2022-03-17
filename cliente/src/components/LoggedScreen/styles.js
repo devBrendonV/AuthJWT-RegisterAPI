@@ -16,10 +16,6 @@ export const Container = styled.div`
   top: center;
   left: center;
 
-  a {
-    text-decoration: none;
-    color: #658cf7;
-  }
   .icon {
     font-size: 90px;
     color: #4090f7;
@@ -30,7 +26,7 @@ export const Container = styled.div`
     left: 0;
     top: 0;
     color: #4090f7;
-    margin:15px;
+    margin: 15px;
   }
 `;
 
@@ -41,41 +37,4 @@ export const CardBody = styled.div`
   flex-direction: column;
   width: 300px;
   height: 400px;
-  label {
-    display: flex;
-    cursor: pointer;
-  }
-  .remember {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    font-size: 15px;
-  }
 `;
-
-export const CardInput = styled.input`
-  width: 100%;
-  height: 50px;
-  border-radius: 5px;
-  border: transparent;
-  background-color: #ebe4e4;
-  outline: none;
-  box-sizing: border-box;
-  margin-bottom: 20px;
-  font-size: 17px;
-  padding-left: 10px;
-`;
-
-export const CardButton = styled.button`
-  width: 100%;
-  height: 40px;
-  font-size: 18px;
-  background-color: #4090f7;
-  border-radius: 5px;
-  border: transparent;
-  padding: 10px;
-  color: #f7f2f2;
-  margin-bottom: 10px;
-  cursor: pointer;
-`;
-

@@ -3,20 +3,18 @@ const User = require("../model/User");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
-const { validateDataLogin } = require("../validateData");
-
 router.post("/", async (req, res) => {
-  const { error } = validateDataLogin(req.body);
-  if (error) return res.status(400).send(error.details[0].message);
-
   const user = await User.findOne({ email: req.body.email });
-  if (!user) return res.status(400).send("Email not found");
+  if (!user) return res.status(302).send("Email not found");
 
-  const verificarSenha = await bcrypt.compare(req.body.senha, user.senha);
-  if (!verificarSenha) return res.status(400).send("Wrong password");
+  const validatePassword = await bcrypt.compare(
+    req.body.password,
+    user.password
+  );
+  if (!validatePassword) return res.status(303).send("Wrong password");
 
   const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET);
-  res.header("auth-token", token).send(token); 
+  res.header("auth-token", token).send({ token: token });
 });
 
 module.exports = router;

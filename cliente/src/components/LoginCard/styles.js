@@ -12,7 +12,8 @@ export const Container = styled.div`
   border-radius: 5px;
   text-align: center;
   color: #474747;
-
+  position: relative;
+  top: 0px;
   a {
     text-decoration: none;
     color: #658cf7;
@@ -20,6 +21,22 @@ export const Container = styled.div`
   .icon {
     font-size: 90px;
     color: #4090f7;
+  }
+  .showpassword {
+    font-size: 30px;
+    position: absolute;
+    left: 350px;
+    top: 20px;
+    color: #202733;
+    background-color: transparent;
+    border: none;
+  }
+  span {
+    display: flex;
+    justify-content: center;
+    color: #e8233a;
+    top: 1px;
+    margin: 2px;
   }
 `;
 
@@ -33,12 +50,6 @@ export const CardBody = styled.div`
   label {
     display: flex;
     cursor: pointer;
-  }
-  .remember {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    font-size: 15px;
   }
 `;
 
@@ -59,7 +70,7 @@ export const CardButton = styled.button`
   width: 100%;
   height: 40px;
   font-size: 18px;
-  background-color: #4090f7;
+  background-color: ${(prop) => (prop.disabled ? "#cccccc" : "#4090f7")};
   border-radius: 5px;
   border: transparent;
   padding: 10px;

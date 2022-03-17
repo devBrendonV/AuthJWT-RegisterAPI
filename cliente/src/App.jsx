@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import styled from "styled-components";
-import axios from "axios";
 import Content from "./components/Content";
-import {
-  BrowserRouter as Router,
-} from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
+
+import Store from "./Store";
 const Container = styled.div`
   background-color: #4090f7;
   color: #ffffff;
@@ -16,25 +15,19 @@ const Container = styled.div`
   height: 100vh;
 `;
 
-const URL = "http://localhost:3003/api/registrar";
+const URL = "http://localhost:3003/api/puxarUsuarios";
+const BRL = "http://localhost:3003/api/registrar";
 
 const App = () => {
-  const [nome, setNome] = useState("");
-  const [email, setEmail] = useState("");
-  const [senha, setSenha] = useState("");
-  async function puxar() {
-    const respo = await axios.post(URL, {
-      nome: nome,
-      email: email,
-      senha: senha,
-    });
-    console.log(respo.data);
-  }
-  return <Container>
-    <Router>
-      <Content></Content>
-    </Router>
-  </Container>;
+  return (
+    <Container>
+      <Store>
+        <Router>
+          <Content></Content>
+        </Router>
+      </Store>
+    </Container>
+  );
 };
 
 export default App;
